@@ -3,13 +3,13 @@ package main
 import (
 	"bufio"
 	"bytes"
+	"encoding/json"
 	"fmt"
 	"github.com/hashicorp/go-retryablehttp"
 	"github.com/tidwall/gjson"
 	"io"
 	"io/ioutil"
 	"log"
-	"net/http"
 	"os"
 	"path"
 	"path/filepath"
@@ -19,18 +19,11 @@ import (
 	"time"
 )
 
-const targetDir = "/tmp/metmuseum"
+const targetDir = "/home/pi/sda1/metmuseum"
 const keywordDir string = "keywords"
+const keywordIdsDir string = "keyword_ids"
 
 var wg sync.WaitGroup
-
-var httpClient = http.Client{
-	Timeout: 1 * time.Minute,
-	Transport: &http.Transport{
-		TLSHandshakeTimeout: 1 * time.Minute,
-		DisableKeepAlives:   true,
-	},
-}
 
 func getIdsByKeyword(keyword string) string {
 	url := fmt.Sprintf("https://collectionapi.metmuseum.org/public/collection/v1/search?q=%s", keyword)
@@ -93,13 +86,24 @@ func saveFile(fileName string, bytes io.Reader) {
 	}
 }
 
-func saveObject(keyword string, data string) {
+func isFileExists(path string) bool {
+	_, err := os.Stat(path)
+	if err != nil {
+		if os.IsExist(err) {
+			return true
+		}
+		return false
+	}
+	return true
+}
+
+func saveObject(data string) {
 	images := gjson.Get(data, "additionalImages").Array()
 	primaryImage := gjson.Get(data, "primaryImage")
 	images = append(images, primaryImage)
 
 	objectID := gjson.Get(data, "objectID").String()
-	localTargetDir := filepath.Join(targetDir, keyword, objectID)
+	localTargetDir := filepath.Join(targetDir, "objects", objectID)
 
 	targetFileName := filepath.Join(localTargetDir, fmt.Sprintf("%s.json", objectID))
 
@@ -115,40 +119,82 @@ func saveObject(keyword string, data string) {
 		log.Panic(err)
 	}
 
-	if len(images) < 1 {
-		return
-	}
+	if len(images) > 0 {
+		wg.Add(len(images))
 
-	wg.Add(len(images))
-
-	for _, imageUrl := range images {
-		go downloadImage(imageUrl.String(), localTargetDir)
+		for _, imageUrl := range images {
+			go downloadImage(imageUrl.String(), localTargetDir)
+		}
 	}
+	saveFile(filepath.Join(localTargetDir, "flag"), bytes.NewReader([]byte("")))
 }
 
-func processObjectById(objectId string, key string) {
+func processObjectById(objectId string) {
 	defer wg.Done()
+	//use local cache
 	respJson := getObjectById(objectId)
-	saveObject(key, respJson)
+	saveObject(respJson)
 }
 
-func main() {
+//Load all keywords, then get all object_ids
+func fetchAllIds() {
 	log.Println("start running  🚗 🚗 🚗 🚗 🚗 🚗")
 	allKeywords := loadAllKeywords()
 	log.Printf("Loading allKeywords length: %d", len(allKeywords))
+	wg.Add(len(allKeywords))
 	for key := range allKeywords {
+		keyFileName := filepath.Join(keywordIdsDir, key)
+		if isFileExists(keyFileName) {
+			wg.Done()
+			log.Printf("key 【%s】 cached, skip", key)
+			continue
+		}
 		idsObj := getIdsByKeyword(key)
 		objectIDs := gjson.Get(idsObj, "objectIDs").Array()
-
-		//todo
-		objectIDs = objectIDs[:10]
-
-		log.Printf("Loading %s,  objectIDs length: %d", key, len(objectIDs))
-		wg.Add(len(objectIDs))
+		var ids []string
 		for _, item := range objectIDs {
-			objectId := item.String()
-			go processObjectById(objectId, key)
+			ids = append(ids, item.String())
+		}
+		jsonStr, _ := json.Marshal(ids)
+		saveFile(keyFileName, bytes.NewReader(jsonStr))
+		wg.Done()
+	}
+	wg.Wait()
+}
+
+//加载所有的 object_ids, 获取数据
+func fetchAllObject() {
+	var dirNames, _ = ioutil.ReadDir(keywordIdsDir)
+	keywordIdsMap := map[string]bool{}
+	for _, f := range dirNames {
+		data, _ := ioutil.ReadFile(path.Join(keywordIdsDir, f.Name()))
+		var arr []string
+		err := json.Unmarshal(data, &arr)
+		if err != nil {
+			//ignore
+		}
+		for _, keyword := range arr {
+			keywordIdsMap[keyword] = true
+		}
+	}
+	log.Printf("Loading all_object_ids length: %d", len(keywordIdsMap))
+
+	flag := 0
+	for objectId := range keywordIdsMap {
+		flag++
+		wg.Add(1)
+		go processObjectById(objectId)
+
+		//控制并发？不知道对不对。。。
+		if flag%10 == 0 {
+			log.Printf("wait ...")
+			wg.Wait()
 		}
 	}
 	wg.Wait()
+}
+
+func main() {
+	//fetchAllIds()
+	fetchAllObject()
 }

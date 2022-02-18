@@ -1,3 +1,7 @@
+github.com/EDDYCJY/gsema v0.0.0-20190120044130-7f6a61b75219 h1:TCY1aa2IQInhAIiumrIkZfUmk2+q0OjspCQutj+Kjng=
+github.com/EDDYCJY/gsema v0.0.0-20190120044130-7f6a61b75219/go.mod h1:wd3egVZ3+ISuA+PWDRLbjNRYZUQwwWXCTcXQrfZAOmQ=
+github.com/Jeffail/tunny v0.1.4 h1:chtpdz+nUtaYQeCKlNBg6GycFF/kGVHOr6A3cmzTJXs=
+github.com/Jeffail/tunny v0.1.4/go.mod h1:P8xAx4XQl0xsuhjX1DtfaMDCSuavzdb2rwbd0lk+fvo=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/hashicorp/go-cleanhttp v0.5.1 h1:dH3aiDG9Jvb5r5+bYHsikaOUIpcM0xvgMXVoDkXMzJM=
 github.com/hashicorp/go-cleanhttp v0.5.1/go.mod h1:JpRdi6/HCYpAwUzNwuwqhbovhLtngrth3wmdIIUrZ80=
