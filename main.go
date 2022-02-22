@@ -132,6 +132,11 @@ func saveObject(data string) {
 func processObjectById(objectId string) {
 	defer wg.Done()
 	//use local cache
+	localTargetDir := filepath.Join(targetDir, "objects", objectId, "flag")
+	if isFileExists(localTargetDir) {
+		log.Printf("Skip objectId: 【%s】", objectId)
+		return
+	}
 	respJson := getObjectById(objectId)
 	saveObject(respJson)
 }
@@ -186,7 +191,7 @@ func fetchAllObject() {
 		go processObjectById(objectId)
 
 		//控制并发？不知道对不对。。。
-		if flag%10 == 0 {
+		if flag%100 == 0 {
 			log.Printf("wait ...")
 			wg.Wait()
 		}
