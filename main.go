@@ -19,7 +19,7 @@ import (
 	"time"
 )
 
-const targetDir = "/home/pi/sda1/metmuseum"
+const targetDir = "/data2/metmuseum"
 const keywordDir string = "keywords"
 const keywordIdsDir string = "keyword_ids"
 
