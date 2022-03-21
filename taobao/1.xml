@@ -1,0 +1,490 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<hierarchy rotation="0">
+    <node index="0" text="" resource-id="" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false"
+          focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,0][720,1369]">
+        <node index="0" text="" resource-id="" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false"
+              focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,0][720,1369]">
+            <node index="0" text="" resource-id="android:id/content" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false" enabled="true"
+                  focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,0][720,1369]">
+                <node index="0" text="" resource-id="" class="android.widget.RelativeLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false" enabled="true"
+                      focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,0][720,1369]">
+                    <node index="0" text="" resource-id="com.taobao.taobao:id/pagegroup" class="android.widget.RelativeLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false"
+                          clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,0][720,1369]">
+                        <node index="0" text="" resource-id="" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false" enabled="true"
+                              focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,0][720,1369]">
+                            <node index="0" text="" resource-id="" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false" enabled="true"
+                                  focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,0][720,1369]">
+                                <node index="0" text="" resource-id="" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false" enabled="true"
+                                      focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,0][720,1369]"/>
+                            </node>
+                        </node>
+                        <node index="1" text="" resource-id="com.taobao.taobao:id/pagecontent" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false"
+                              clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                              bounds="[0,0][720,1369]">
+                            <node index="0" text="" resource-id="" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false" enabled="true"
+                                  focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,0][720,1369]">
+                                <node index="0" text="" resource-id="com.taobao.taobao:id/bottom_right_linear" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="" checkable="false"
+                                      checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                      bounds="[0,0][700,1271]"/>
+                            </node>
+                            <node index="1" text="" resource-id="" class="android.widget.ScrollView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false" enabled="true"
+                                  focusable="true" focused="false" scrollable="true" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,0][720,1369]">
+                                <node index="0" text="" resource-id="" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false" enabled="true"
+                                      focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,0][720,1369]">
+                                    <node index="0" text="" resource-id="com.taobao.taobao:id/mainpage2" class="android.support.v7.widget.RecyclerView" package="com.taobao.taobao" content-desc="" checkable="false"
+                                          checked="false" clickable="false" enabled="true" focusable="true" focused="false" scrollable="true" long-clickable="false" password="false" selected="false"
+                                          visible-to-user="true" bounds="[0,0][720,1369]">
+                                        <node index="1" text="" resource-id="" class="android.widget.RelativeLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                              enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,0][720,960]">
+                                            <node index="1" text="" resource-id="com.taobao.taobao:id/mainpic_viewpager_pullbase" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc=""
+                                                  checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false"
+                                                  selected="false" visible-to-user="true" bounds="[0,0][720,960]">
+                                                <node index="0" text="" resource-id="com.taobao.taobao:id/mainpic_view_pager" class="android.support.v7.widget.RecyclerView" package="com.taobao.taobao" content-desc=""
+                                                      checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" scrollable="true" long-clickable="false" password="false"
+                                                      selected="false" visible-to-user="true" bounds="[0,0][720,960]">
+                                                    <node index="0" text="" resource-id="com.taobao.taobao:id/frame_root_layout" class="android.widget.RelativeLayout" package="com.taobao.taobao" content-desc=""
+                                                          checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false"
+                                                          selected="false" visible-to-user="true" bounds="[0,0][720,960]">
+                                                        <node index="0" text="" resource-id="com.taobao.taobao:id/frame_content_layout" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc=""
+                                                              checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false"
+                                                              password="false" selected="false" visible-to-user="true" bounds="[0,0][720,960]">
+                                                            <node NAF="true" index="0" text="" resource-id="" class="android.widget.ImageView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false"
+                                                                  clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false"
+                                                                  visible-to-user="true" bounds="[0,0][720,960]"/>
+                                                        </node>
+                                                        <node index="1" text="" resource-id="com.taobao.taobao:id/frame_float_layout" class="android.widget.RelativeLayout" package="com.taobao.taobao" content-desc=""
+                                                              checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false"
+                                                              password="false" selected="false" visible-to-user="true" bounds="[0,0][720,960]"/>
+                                                    </node>
+                                                </node>
+                                            </node>
+                                            <node index="2" text="" resource-id="com.taobao.taobao:id/mainpic_indicator_container" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc=""
+                                                  checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false"
+                                                  selected="false" visible-to-user="true" bounds="[622,893][720,960]">
+                                                <node index="0" text="3/6" resource-id="com.taobao.taobao:id/mainpic_text_indicator" class="android.widget.TextView" package="com.taobao.taobao" content-desc=""
+                                                      checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false"
+                                                      selected="false" visible-to-user="true" bounds="[622,893][702,941]"/>
+                                            </node>
+                                        </node>
+                                        <node index="2" text="" resource-id="" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                              enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                              bounds="[0,960][720,984]"/>
+                                        <node index="3" text="" resource-id="" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                              enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                              bounds="[0,984][720,1055]">
+                                            <node index="0" text="" resource-id="" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                  enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                  bounds="[17,984][703,1055]">
+                                                <node index="0" text="" resource-id="" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                      enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                      bounds="[40,1007][356,1055]">
+                                                    <node index="0" text="" resource-id="" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false"
+                                                          clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false"
+                                                          visible-to-user="true" bounds="[40,1007][212,1053]">
+                                                        <node index="0" text="￥" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false"
+                                                              clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false"
+                                                              visible-to-user="true" bounds="[40,1016][69,1053]"/>
+                                                        <node index="1" text="88-338" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false"
+                                                              clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false"
+                                                              visible-to-user="true" bounds="[69,1007][212,1053]"/>
+                                                    </node>
+                                                    <node index="1" text="" resource-id="" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="原价价格176" checkable="false" checked="false"
+                                                          clickable="false" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false"
+                                                          visible-to-user="true" bounds="[222,1019][356,1055]">
+                                                        <node index="0" text="价格" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false"
+                                                              clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false"
+                                                              visible-to-user="true" bounds="[226,1019][268,1055]"/>
+                                                        <node index="1" text="￥" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false"
+                                                              clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false"
+                                                              visible-to-user="true" bounds="[268,1019][291,1055]"/>
+                                                        <node index="2" text="176" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false"
+                                                              clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false"
+                                                              visible-to-user="true" bounds="[291,1019][333,1055]"/>
+                                                        <node index="3" text="起" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false"
+                                                              clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false"
+                                                              visible-to-user="true" bounds="[335,1023][356,1052]"/>
+                                                    </node>
+                                                </node>
+                                            </node>
+                                        </node>
+                                        <node index="4" text="" resource-id="" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                              enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                              bounds="[0,1055][720,1113]">
+                                            <node NAF="true" index="0" text="" resource-id="" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false"
+                                                  clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                  bounds="[17,1055][703,1113]"/>
+                                            <node index="1" text="" resource-id="" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                  enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                  bounds="[40,1070][225,1110]"/>
+                                            <node index="2" text="" resource-id="" class="android.widget.ImageView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                  enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                  bounds="[40,1070][225,1110]"/>
+                                            <node index="3" text="店铺券满98减5" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                  enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                  bounds="[49,1073][216,1107]"/>
+                                            <node index="4" text="" resource-id="" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                  enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                  bounds="[237,1070][383,1110]"/>
+                                            <node index="5" text="" resource-id="" class="android.widget.ImageView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                  enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                  bounds="[237,1070][383,1110]"/>
+                                            <node index="6" text="满28享包邮" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                  enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                  bounds="[246,1073][374,1107]"/>
+                                            <node index="7" text="" resource-id="" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                  enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                  bounds="[395,1070][538,1110]"/>
+                                            <node index="8" text="" resource-id="" class="android.widget.ImageView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                  enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                  bounds="[395,1070][538,1110]"/>
+                                            <node index="9" text="购买得积分" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                  enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                  bounds="[404,1073][529,1107]"/>
+                                            <node index="11" text="" resource-id="" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                  enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                  bounds="[588,1073][680,1107]">
+                                                <node index="0" text="领券" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                      enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                      bounds="[605,1073][655,1107]"/>
+                                                <node index="1" text="큚" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                      enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                      bounds="[661,1077][680,1102]"/>
+                                            </node>
+                                        </node>
+                                        <node index="5" text="" resource-id="" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                              enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                              bounds="[0,1113][720,1164]">
+                                            <node NAF="true" index="0" text="" resource-id="" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false"
+                                                  clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                  bounds="[17,1113][703,1164]"/>
+                                            <node index="2" text="" resource-id="" class="android.widget.ImageView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                  enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                  bounds="[40,1131][146,1162]"/>
+                                            <node index="3" text="经品牌直营认证的天猫商家" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false"
+                                                  clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                  bounds="[158,1130][458,1164]"/>
+                                            <node index="4" text="月销 1万+" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                  enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                  bounds="[571,1130][680,1164]"/>
+                                        </node>
+                                        <node index="6" text="" resource-id="" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                              enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                              bounds="[0,1164][720,1265]">
+                                            <node NAF="true" index="0" text="" resource-id="" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false"
+                                                  clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                  bounds="[17,1164][703,1265]"/>
+                                            <node index="2" text="KaSi美甲套装全套初学者家用专业做指甲油胶工具光疗机灯开店专用 //gw.alicdn.com/tfs/TB1m5xFr1H2gK0jSZJnXXaT1FXa-216-64.png" resource-id="" class="android.widget.TextView"
+                                                  package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" scrollable="false"
+                                                  long-clickable="true" password="false" selected="false" visible-to-user="true" bounds="[40,1176][680,1265]"/>
+                                        </node>
+                                        <node index="7" text="" resource-id="" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                              enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                              bounds="[0,1265][720,1351]">
+                                            <node index="0" text="" resource-id="" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                  enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                  bounds="[17,1265][703,1351]">
+                                                <node index="0" text="" resource-id="" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="推荐" checkable="false" checked="false" clickable="true"
+                                                      enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                      bounds="[83,1290][179,1328]"/>
+                                                <node index="1" text="" resource-id="" class="android.widget.ImageView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                      enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                      bounds="[83,1290][121,1328]"/>
+                                                <node index="2" text="推荐" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                      enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                      bounds="[129,1292][179,1326]"/>
+                                                <node index="3" text="" resource-id="" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="帮我选" checkable="false" checked="false" clickable="true"
+                                                      enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                      bounds="[298,1290][419,1328]"/>
+                                                <node index="4" text="" resource-id="" class="android.widget.ImageView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                      enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                      bounds="[298,1290][336,1328]"/>
+                                                <node index="5" text="帮我选" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                      enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                      bounds="[344,1292][419,1326]"/>
+                                                <node index="6" text="" resource-id="" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="分享" checkable="false" checked="false" clickable="true"
+                                                      enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                      bounds="[539,1290][635,1328]"/>
+                                                <node index="7" text="" resource-id="" class="android.widget.ImageView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                      enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                      bounds="[539,1290][577,1328]"/>
+                                                <node index="8" text="分享" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                      enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                      bounds="[585,1292][635,1326]"/>
+                                            </node>
+                                        </node>
+                                        <node index="8" text="" resource-id="" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                              enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                              bounds="[0,1351][720,1369]"/>
+                                        <node index="9" text="" resource-id="" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                              enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                              bounds="[0,1375][720,1411]">
+                                            <node index="0" text="" resource-id="" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="true"
+                                                  enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                  bounds="[17,1375][703,1411]">
+                                                <node index="1" text="选择" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                      enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                      bounds="[40,1408][130,1411]"/>
+                                                <node index="2" text="颜色分类" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                      enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                      bounds="[130,1408][238,1411]"/>
+                                            </node>
+                                        </node>
+                                    </node>
+                                </node>
+                            </node>
+                        </node>
+                        <node index="2" text="" resource-id="" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false" enabled="true"
+                              focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,0][720,1369]">
+                            <node index="0" text="" resource-id="" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false" enabled="true"
+                                  focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,0][720,1369]">
+                                <node index="0" text="" resource-id="" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false" enabled="true"
+                                      focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,0][720,1369]"/>
+                            </node>
+                        </node>
+                        <node index="3" text="" resource-id="com.taobao.taobao:id/actionbar_layout" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false"
+                              clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,0][720,223]">
+                            <node index="0" text="" resource-id="" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false" enabled="true"
+                                  focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,0][720,223]">
+                                <node index="0" text="" resource-id="" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false" enabled="true"
+                                      focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,0][720,151]">
+                                    <node index="0" text="" resource-id="" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                          enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,55][720,151]">
+                                        <node index="0" text="ꁽ" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="返回" checkable="false" checked="false" clickable="true"
+                                              enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[20,71][84,135]"/>
+                                        <node index="2" text="" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="true"
+                                              enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                              bounds="[476,71][540,135]"/>
+                                        <node index="3" text="ꁊ" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="购物车" checkable="false" checked="false" clickable="true"
+                                              enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                              bounds="[556,71][620,135]"/>
+                                        <node index="4" text="" resource-id="" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="更多109" checkable="false" checked="false" clickable="true"
+                                              enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[636,71][700,135]">
+                                            <node index="0" text="" resource-id="com.taobao.taobao:id/uik_public_menu_action_fr" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc=""
+                                                  checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false"
+                                                  selected="false" visible-to-user="true" bounds="[636,71][700,135]">
+                                                <node index="0" text="ꈝ" resource-id="com.taobao.taobao:id/uik_public_menu_action_icon" class="android.widget.TextView" package="com.taobao.taobao" content-desc=""
+                                                      checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false"
+                                                      selected="false" visible-to-user="true" bounds="[644,79][692,127]"/>
+                                                <node index="1" text="•••" resource-id="com.taobao.taobao:id/uik_public_menu_action_message" class="android.widget.TextView" package="com.taobao.taobao" content-desc=""
+                                                      checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false"
+                                                      selected="false" visible-to-user="true" bounds="[646,73][694,109]"/>
+                                            </node>
+                                        </node>
+                                    </node>
+                                </node>
+                            </node>
+                        </node>
+                        <node index="4" text="" resource-id="com.taobao.taobao:id/fl_detail_fragment" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false"
+                              clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                              bounds="[0,223][720,1369]"/>
+                        <node index="5" text="" resource-id="com.taobao.taobao:id/bottombar_layout" class="android.widget.RelativeLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false"
+                              clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                              bounds="[0,1411][720,1520]">
+                            <node index="0" text="" resource-id="com.taobao.taobao:id/ll_bottom_bar" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false"
+                                  clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                  bounds="[0,1411][720,1520]">
+                                <node index="0" text="" resource-id="" class="android.view.View" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false" enabled="true"
+                                      focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,1411][720,1412]"/>
+                                <node index="1" text="" resource-id="com.taobao.taobao:id/ll_bottom_bar_content" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="" checkable="false"
+                                      checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                      bounds="[0,1412][720,1520]">
+                                    <node index="0" text="" resource-id="" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                          enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,1412][720,1520]">
+                                        <node index="0" text="" resource-id="" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                              enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                              bounds="[0,1412][720,1520]">
+                                            <node index="0" text="" resource-id="" class="android.widget.FrameLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                  enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                  bounds="[0,1412][720,1520]"/>
+                                            <node index="1" text="" resource-id="" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                  enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                  bounds="[0,1412][282,1520]">
+                                                <node index="0" text="" resource-id="" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="店铺" checkable="false" checked="false" clickable="true"
+                                                      enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                      bounds="[0,1412][90,1520]">
+                                                    <node index="0" text="삊" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                          enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                          bounds="[27,1433][63,1469]"/>
+                                                    <node index="1" text="店铺" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                          enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                          bounds="[0,1477][90,1504]"/>
+                                                </node>
+                                                <node index="1" text="" resource-id="" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="客服" checkable="false" checked="false" clickable="true"
+                                                      enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                      bounds="[75,1412][196,1520]">
+                                                    <node index="0" text="쁪" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                          enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                          bounds="[117,1433][153,1469]"/>
+                                                    <node index="1" text="客服" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                          enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                          bounds="[75,1477][196,1504]"/>
+                                                </node>
+                                                <node index="2" text="" resource-id="" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="收藏" checkable="false" checked="false" clickable="true"
+                                                      enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                      bounds="[165,1412][282,1520]">
+                                                    <node index="0" text="뀚" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                          enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                          bounds="[207,1433][243,1469]"/>
+                                                    <node index="1" text="收藏" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                          enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                          bounds="[165,1477][282,1504]"/>
+                                                </node>
+                                            </node>
+                                            <node index="2" text="" resource-id="" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                  enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                  bounds="[282,1426][704,1506]">
+                                                <node index="0" text="" resource-id="" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="加入购物车" checkable="false" checked="false"
+                                                      clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                      bounds="[282,1426][493,1506]"/>
+                                                <node index="1" text="" resource-id="" class="android.view.View" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                      enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                      bounds="[282,1426][493,1506]"/>
+                                                <node index="2" text="加入购物车" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                      enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                      bounds="[317,1446][457,1484]"/>
+                                                <node index="4" text="" resource-id="" class="android.widget.LinearLayout" package="com.taobao.taobao" content-desc="立即购买" checkable="false" checked="false"
+                                                      clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                      bounds="[493,1426][704,1506]"/>
+                                                <node index="5" text="" resource-id="" class="android.view.View" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                      enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                      bounds="[493,1426][704,1506]"/>
+                                                <node index="6" text="立即购买" resource-id="" class="android.widget.TextView" package="com.taobao.taobao" content-desc="" checkable="false" checked="false" clickable="false"
+                                                      enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                      bounds="[542,1446][654,1484]"/>
+                                            </node>
+                                        </node>
+                                    </node>
+                                </node>
+                            </node>
+                        </node>
+                    </node>
+                </node>
+            </node>
+        </node>
+    </node>
+    <node index="0" text="" resource-id="" class="android.widget.FrameLayout" package="com.android.systemui" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false"
+          focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,0][720,55]">
+        <node index="1" text="" resource-id="com.android.systemui:id/scrim_behind" class="android.view.View" package="com.android.systemui" content-desc="" checkable="false" checked="false" clickable="false"
+              enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,0][720,55]"/>
+        <node index="2" text="" resource-id="com.android.systemui:id/scrim_in_front" class="android.view.View" package="com.android.systemui" content-desc="" checkable="false" checked="false" clickable="false"
+              enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,0][720,55]"/>
+        <node index="3" text="" resource-id="" class="android.view.View" package="com.android.systemui" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false"
+              scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,0][720,55]"/>
+        <node index="4" text="" resource-id="com.android.systemui:id/status_bar_container" class="android.widget.FrameLayout" package="com.android.systemui" content-desc="" checkable="false" checked="false"
+              clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,0][720,55]">
+            <node index="0" text="" resource-id="com.android.systemui:id/status_bar" class="android.widget.FrameLayout" package="com.android.systemui" content-desc="" checkable="false" checked="false" clickable="false"
+                  enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[0,0][720,55]">
+                <node index="0" text="" resource-id="com.android.systemui:id/phone_status_bar_contents_container" class="android.widget.LinearLayout" package="com.android.systemui" content-desc="" checkable="false"
+                      checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                      bounds="[8,0][712,55]">
+                    <node index="0" text="" resource-id="" class="android.widget.FrameLayout" package="com.android.systemui" content-desc="" checkable="false" checked="false" clickable="false" enabled="true"
+                          focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[35,14][361,55]">
+                        <node index="0" text="" resource-id="com.android.systemui:id/clock_container" class="android.widget.FrameLayout" package="com.android.systemui" content-desc="" checkable="false" checked="false"
+                              clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                              bounds="[35,14][309,55]">
+                            <node index="0" text="" resource-id="com.android.systemui:id/leftside" class="android.widget.LinearLayout" package="com.android.systemui" content-desc="" checkable="false" checked="false"
+                                  clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                  bounds="[35,14][309,55]">
+                                <node index="0" text="晚上10:06" resource-id="com.android.systemui:id/clock" class="android.widget.TextView" package="com.android.systemui" content-desc="" checkable="false" checked="false"
+                                      clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                      bounds="[35,14][151,55]"/>
+                                <node index="2" text="" resource-id="com.android.systemui:id/drip_leftear_super_container" class="android.widget.LinearLayout" package="com.android.systemui" content-desc=""
+                                      checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false"
+                                      visible-to-user="true" bounds="[151,14][309,55]">
+                                    <node index="0" text="" resource-id="com.android.systemui:id/notification_icon_area" class="android.widget.FrameLayout" package="com.android.systemui" content-desc="" checkable="false"
+                                          checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false"
+                                          visible-to-user="true" bounds="[151,14][309,55]">
+                                        <node index="0" text="" resource-id="com.android.systemui:id/notification_icon_area_inner" class="android.widget.LinearLayout" package="com.android.systemui" content-desc=""
+                                              checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false"
+                                              selected="false" visible-to-user="true" bounds="[151,14][309,55]">
+                                            <node index="0" text="" resource-id="com.android.systemui:id/notificationIcons" class="android.widget.FrameLayout" package="com.android.systemui" content-desc=""
+                                                  checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false"
+                                                  selected="false" visible-to-user="true" bounds="[151,14][309,55]">
+                                                <node index="16" text="" resource-id="" class="android.widget.ImageView" package="com.android.systemui" content-desc="智能服务通知：新春大促！lamer精粹水降价啦！" checkable="false"
+                                                      checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false"
+                                                      visible-to-user="true" bounds="[269,21][305,47]"/>
+                                                <node index="19" text="" resource-id="" class="android.widget.ImageView" package="com.android.systemui" content-desc="智能服务通知：小米投影仪9块9抢" checkable="false" checked="false"
+                                                      clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                      bounds="[187,21][223,47]"/>
+                                                <node index="21" text="" resource-id="" class="android.widget.ImageView" package="com.android.systemui" content-desc="应用商店通知：73%的用户已更新这72款应用" checkable="false"
+                                                      checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false"
+                                                      visible-to-user="true" bounds="[279,21][309,47]"/>
+                                                <node index="22" text="" resource-id="" class="android.widget.ImageView" package="com.android.systemui" content-desc="Android 系统通知：已开启 USB 文件传输模式" checkable="false"
+                                                      checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false"
+                                                      visible-to-user="true" bounds="[259,21][295,47]"/>
+                                                <node index="23" text="" resource-id="" class="android.widget.ImageView" package="com.android.systemui" content-desc="Android 系统通知：已连接到 USB 调试" checkable="false"
+                                                      checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false"
+                                                      visible-to-user="true" bounds="[223,21][259,47]"/>
+                                                <node index="24" text="" resource-id="" class="android.widget.ImageView" package="com.android.systemui" content-desc="应用商店通知：浏览器有新版本啦～" checkable="false" checked="false"
+                                                      clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                                      bounds="[151,21][187,47]"/>
+                                            </node>
+                                        </node>
+                                    </node>
+                                </node>
+                            </node>
+                        </node>
+                    </node>
+                    <node index="1" text="" resource-id="com.android.systemui:id/system_icon_area" class="android.widget.LinearLayout" package="com.android.systemui" content-desc="" checkable="false" checked="false"
+                          clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[361,14][688,55]">
+                        <node index="0" text="" resource-id="com.android.systemui:id/drip_right_content" class="android.widget.LinearLayout" package="com.android.systemui" content-desc="" checkable="false"
+                              checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                              bounds="[411,14][688,55]">
+                            <node index="0" text="" resource-id="com.android.systemui:id/system_icons" class="android.widget.LinearLayout" package="com.android.systemui" content-desc="" checkable="false" checked="false"
+                                  clickable="false" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                  bounds="[537,14][688,55]">
+                                <node index="0" text="" resource-id="com.android.systemui:id/signal_cluster_view" class="android.widget.LinearLayout" package="com.android.systemui" content-desc="" checkable="false"
+                                      checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                      bounds="[537,14][618,55]">
+                                    <node index="0" text="" resource-id="com.android.systemui:id/signal_cluster" class="android.widget.LinearLayout" package="com.android.systemui" content-desc="" checkable="false"
+                                          checked="false" clickable="false" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false"
+                                          visible-to-user="true" bounds="[537,14][618,55]">
+                                        <node index="0" text="" resource-id="com.android.systemui:id/mobile_signal_group_dual_notch" class="android.widget.LinearLayout" package="com.android.systemui" content-desc=""
+                                              checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false"
+                                              selected="false" visible-to-user="true" bounds="[537,14][545,55]">
+                                            <node index="0" text="" resource-id="com.android.systemui:id/mobile_combo" class="android.widget.LinearLayout" package="com.android.systemui" content-desc="" checkable="false"
+                                                  checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false"
+                                                  visible-to-user="true" bounds="[537,14][545,55]">
+                                                <node index="1" text="" resource-id="com.android.systemui:id/notch_carrier" class="android.widget.TextView" package="com.android.systemui" content-desc="" checkable="false"
+                                                      checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false"
+                                                      visible-to-user="true" bounds="[537,14][541,55]"/>
+                                                <node index="2" text="" resource-id="com.android.systemui:id/mobile_type" class="android.widget.TextView" package="com.android.systemui" content-desc="" checkable="false"
+                                                      checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false"
+                                                      visible-to-user="true" bounds="[541,14][545,55]"/>
+                                            </node>
+                                        </node>
+                                        <node index="3" text="" resource-id="com.android.systemui:id/no_sims" class="android.widget.ImageView" package="com.android.systemui" content-desc="" checkable="false"
+                                              checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false"
+                                              visible-to-user="true" bounds="[545,16][579,54]"/>
+                                        <node index="4" text="" resource-id="com.android.systemui:id/wifi_combo" class="android.widget.FrameLayout" package="com.android.systemui" content-desc="WLAN 信号满格。"
+                                              checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false"
+                                              selected="false" visible-to-user="true" bounds="[579,16][618,54]">
+                                            <node index="0" text="" resource-id="com.android.systemui:id/wifi_signal" class="android.widget.ImageView" package="com.android.systemui" content-desc="" checkable="false"
+                                                  checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false"
+                                                  visible-to-user="true" bounds="[579,16][618,54]"/>
+                                        </node>
+                                    </node>
+                                </node>
+                                <node index="2" text="" resource-id="com.android.systemui:id/battery" class="android.widget.LinearLayout" package="com.android.systemui" content-desc="" checkable="false" checked="false"
+                                      clickable="false" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true"
+                                      bounds="[618,14][688,55]">
+                                    <node index="0" text="" resource-id="" class="android.widget.FrameLayout" package="com.android.systemui" content-desc="" checkable="false" checked="false" clickable="false"
+                                          enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[618,16][675,54]">
+                                        <node index="0" text="" resource-id="com.android.systemui:id/battery_image" class="android.widget.ImageView" package="com.android.systemui" content-desc="正在充电，已完成百分之41。"
+                                              checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false"
+                                              selected="false" visible-to-user="true" bounds="[618,16][675,54]"/>
+                                        <node index="1" text="41" resource-id="com.android.systemui:id/battery_digit" class="android.widget.TextView" package="com.android.systemui" content-desc="" checkable="false"
+                                              checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false"
+                                              visible-to-user="true" bounds="[635,16][653,54]"/>
+                                    </node>
+                                    <node index="1" text="" resource-id="" class="android.widget.ImageView" package="com.android.systemui" content-desc="" checkable="false" checked="false" clickable="false"
+                                          enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" visible-to-user="true" bounds="[675,14][688,55]"/>
+                                </node>
+                            </node>
+                        </node>
+                    </node>
+                </node>
+            </node>
+        </node>
+    </node>
+</hierarchy>
