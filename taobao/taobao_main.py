@@ -10,10 +10,13 @@ import uiautomator2 as u2
 class Automator:
     def __init__(self):
         self.app = u2.connect()
+        self.restart()
+
+    def restart(self):
         self.app.app_start('com.taobao.taobao', stop=True)
 
 
-def process_item(keyword: str, automator: Automator):
+def process_item(keyword: str, automator: Automator, price_str: str):
     print('start process new item.....')
 
     time.sleep(random.randint(5, 8))
@@ -32,7 +35,8 @@ def process_item(keyword: str, automator: Automator):
             max_length = len(text)
             product_name = text  # 取最长的作为 product_name
 
-        if "/" in text and image_size == 0:
+        # 都是 1/6 1/5 之类的
+        if "/" in text and len(text) == 3 and image_size == 0:
             image_size = int(text.split('/')[-1])
 
         if text == '￥':
@@ -54,7 +58,7 @@ def process_item(keyword: str, automator: Automator):
         print(all_texts)
         exit(-1)
 
-    base_dir = "/tmp/hdd/{}/{}".format(keyword, product_id)
+    base_dir = "/tmp/hdd/{}/{}/{}".format(keyword, price_str, product_id)
     if not os.path.exists(base_dir):
         os.makedirs(base_dir)
     else:
@@ -104,7 +108,26 @@ def process_item(keyword: str, automator: Automator):
     return True
 
 
-def process_keyword(keyword: str, automator: Automator):
+def main():
+    keywords = [
+        "项链",
+        "耳钉",
+        "戒指",
+        "耳夹",
+        "手链",
+        "吊坠"
+    ]
+    for keyword in keywords:
+        prices = [0, 100, 500, 1000, 10000]
+        for index in range(len(prices) - 1):
+            start_price = prices[index]
+            end_price = prices[index + 1]
+
+            automator = Automator()
+            process_keyword(keyword, automator, start_price, end_price)
+
+
+def process_keyword(keyword: str, automator: Automator, start_price, end_price):
     automator.app.xpath('//*[@content-desc="搜索栏"]/android.widget.FrameLayout[1]/android.widget.FrameLayout[2]/android.widget.LinearLayout[1]').click()
     automator.app.xpath('//*[@resource-id="com.taobao.taobao:id/searchEdit"]').set_text(keyword)
 
@@ -121,6 +144,21 @@ def process_keyword(keyword: str, automator: Automator):
 
     automator.app.implicitly_wait(10 * 3)
 
+    time.sleep(10)
+
+    # 添加价格
+    automator.app.xpath('//*[@resource-id="com.taobao.taobao:id/filterBtn"]').click()
+
+    try:
+        automator.app.xpath('//*[@text="自定最低价"]').set_text(str(start_price))
+        automator.app.xpath('//*[@text="自定最高价"]').set_text(str(end_price))
+    except:
+        pass
+
+    time.sleep(1)
+
+    automator.app.xpath('//*[@content-desc="关闭筛选"]').click()
+
     i = 0
     while i < 20:
         time.sleep(3)
@@ -128,7 +166,7 @@ def process_keyword(keyword: str, automator: Automator):
         for item in temp_lists:
             item.click()
             automator.app.implicitly_wait(20)
-            flag = process_item(keyword, automator)
+            flag = process_item(keyword, automator, "{}_{}".format(start_price, end_price))
             if flag:
                 # 返回到上一个页面
                 automator.app.swipe(0, 900, 300, 900, 0.1)
@@ -136,14 +174,6 @@ def process_keyword(keyword: str, automator: Automator):
         # 向下滑动
         automator.app.swipe(300, 1000, 300, 300, 0.08)
         automator.app.implicitly_wait(10)
-
-
-def main():
-    # keywords = ['美甲片', '穿戴甲', '甲片']
-    keywords = ['爱心项链', '爱心耳钉', '爱心戒指']
-    for keyword in keywords:
-        automator = Automator()
-        process_keyword(keyword, automator)
 
 
 # 爱心项链
