@@ -102,7 +102,7 @@ def process_item(keyword: str, automator: Automator, price_str: str):
         'image_names': image_names,
     }
     with open(os.path.join(base_dir, 'result.json'), 'w') as f:
-        json.dump(data, f)
+        json.dump(data, f, ensure_ascii=False)
     print('🎉🎉🎉 。。。')
     print('\n')
     return True
