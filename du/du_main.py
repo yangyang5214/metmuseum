@@ -13,15 +13,13 @@ class Automator:
         self.restart()
 
     def restart(self):
-        self.app.app_start('com.shizhuang.duapp', stop=True, wait=True)
+        self.app.app_start('com.shizhuang.duapp', stop=True)
         # 初始化到 购买 tag
-        time.sleep(5)
-        iv_close = self.app.xpath('//*[@resource-id="com.shizhuang.duapp:id/iv_close"]')
-        if iv_close.exists:
-            iv_close.click()
-        rbtn_mall = self.app.xpath('//*[@resource-id="com.shizhuang.duapp:id/rbtn_mall"]')
-        if rbtn_mall.exists:
-            rbtn_mall.click()
+        time.sleep(10)
+        self.app.watcher.when('//*[@resource-id="com.shizhuang.duapp:id/iv_close"]').click()
+        btn_mall = self.app.xpath('//*[@resource-id="com.shizhuang.duapp:id/rbtn_mall"]')
+        if btn_mall.exists:
+            btn_mall.click()
 
 
 def process_item(keyword: str, automator: Automator, price_str: str):
@@ -34,6 +32,7 @@ def process_item(keyword: str, automator: Automator, price_str: str):
     sales = None
     prices = []
     image_size = 0
+    image_size_start = 0
 
     max_length = -1
     product_name = None
@@ -44,11 +43,11 @@ def process_item(keyword: str, automator: Automator, price_str: str):
 
         # 都是 1/6 1/5 之类的
         if not image_size and "/" in text:
-            image_size = int(text.split('/')[-1])
-
-        if text.startswith('¥'):
+            image_size_start = int(text.split('/')[0])
+            image_size = int(text.split('/')[1])
+        elif text.startswith('¥'):
             prices.append(text)
-        elif '付款' in text:
+        elif '付款' in text and '想要' in text:
             sales = text
 
     if not prices:
@@ -73,11 +72,13 @@ def process_item(keyword: str, automator: Automator, price_str: str):
     automator.app.screenshot(os.path.join(base_dir, 'main.png'))
 
     print('开始处理图片。。。image_size: {}'.format(image_size))
-    for i in range(0, image_size - 1):
-        automator.app.swipe(600, 300, 100, 300, 0.1)
-        time.sleep(2)
+    for i in range(0, image_size - image_size_start - 1):
+        automator.app.swipe(700, 300, 100, 300, 0.1)
+        time.sleep(3)
+        print("swipe...{}".format(i))
 
     automator.app.click(300, 300)
+    time.sleep(0.5)
 
     image_names = []
 
@@ -85,12 +86,10 @@ def process_item(keyword: str, automator: Automator, price_str: str):
     automator.app.screenshot(image_name)
     image_names.append(image_name)
 
-    # 取开始的图片，上述滑动，一定几率可能失败
-    real_image_size = automator.app.xpath('//*[@resource-id="com.shizhuang.duapp:id/pvTvPosition"]').text.split('/')[0]
-
-    for i in range(1, int(real_image_size) - 1):
-        automator.app.swipe(600, 300, 100, 300, 0.1)
-        time.sleep(1)
+    for i in range(1, image_size - 1):
+        automator.app.swipe(100, 300, 700, 300, 0.1)
+        print("swipe...{}".format(i))
+        time.sleep(3)
         image_name = os.path.join(base_dir, str(i) + '.png')
         automator.app.screenshot(image_name)
         image_names.append(image_name)
@@ -101,7 +100,7 @@ def process_item(keyword: str, automator: Automator, price_str: str):
     data = {
         'product_id': product_id,
         'price': prices[0],
-        'second_price': prices[1] if len(prices) > 1 else prices[0],
+        'original_price': prices[1] if len(prices) > 1 else prices[0],
         'product_name': product_name,
         'sales': sales,
         'image_names': image_names,
@@ -115,7 +114,6 @@ def process_item(keyword: str, automator: Automator, price_str: str):
 
 def main():
     keywords = [
-        "项链",
         "耳钉",
         "戒指",
         "耳夹",
@@ -165,7 +163,8 @@ def process_keyword(keyword: str, automator: Automator, start_price, end_price):
         '//*[@resource-id="com.shizhuang.duapp:id/layMenuFilterView"]/android.widget.RelativeLayout[1]/androidx.recyclerview.widget.RecyclerView[1]/android.widget.LinearLayout[1]/androidx.recyclerview.widget.RecyclerView[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[2]') \
         .set_text(str(end_price))
 
-    # todo 键盘遮住了
+    # https://www.cnblogs.com/yoyoketang/p/10850591.html 隐藏键盘
+    automator.app.press(4)
 
     tv_confirm = automator.app.xpath('//*[@resource-id="com.shizhuang.duapp:id/tvConfirm"]')
     tv_confirm.click()
