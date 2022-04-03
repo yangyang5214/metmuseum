@@ -6,6 +6,8 @@ import time
 
 import uiautomator2 as u2
 
+home_dir = "/Users/beer/temp"
+
 
 class Automator:
     def __init__(self):
@@ -23,98 +25,99 @@ class Automator:
 
 
 def process_item(keyword: str, automator: Automator, price_str: str):
-    print('start process new item.....')
+    try:
+        print('start process new item.....')
 
-    time.sleep(random.randint(1, 3))
+        time.sleep(random.randint(1, 3))
 
-    all_text = automator.app.xpath('//android.widget.TextView').all()
-    all_texts = [_.text.strip() for _ in all_text]
-    sales = None
-    prices = []
-    image_size = 0
-    image_size_start = 0
+        all_text = automator.app.xpath('//android.widget.TextView').all()
+        all_texts = [_.text.strip() for _ in all_text]
+        sales = None
+        prices = []
+        image_size = 0
+        image_size_start = 0
 
-    max_length = -1
-    product_name = None
-    for text in all_texts:
-        if len(text) > max_length:
-            max_length = len(text)
-            product_name = text  # 取最长的作为 product_name
+        max_length = -1
+        product_name = None
+        for text in all_texts:
+            if len(text) > max_length:
+                max_length = len(text)
+                product_name = text  # 取最长的作为 product_name
 
-        # 都是 1/6 1/5 之类的
-        if not image_size and "/" in text:
-            image_size_start = int(text.split('/')[0])
-            image_size = int(text.split('/')[1])
-        elif text.startswith('¥'):
-            prices.append(text)
-        elif '付款' in text and '想要' in text:
-            sales = text
+            # 都是 1/6 1/5 之类的
+            if not image_size and "/" in text:
+                image_size_start = int(text.split('/')[0])
+                image_size = int(text.split('/')[1])
+            elif text.startswith('¥'):
+                prices.append(text)
+            elif '付款' in text and '想要' in text:
+                sales = text
 
-    if not prices:
-        print(all_texts)
-        return False
+        if not prices:
+            print(all_texts)
+            return False
 
-    product_id = None
-    if product_name:
-        product_id = hashlib.md5(product_name.encode('utf-8')).hexdigest()
-    else:
-        print(all_texts)
-        exit(-1)
+        product_id = None
+        if product_name:
+            product_id = hashlib.md5(product_name.encode('utf-8')).hexdigest()
+        else:
+            print(all_texts)
+            exit(-1)
 
-    base_dir = "/tmp/hdd/du/{}/{}/{}".format(keyword, price_str, product_id)
-    if not os.path.exists(base_dir):
-        os.makedirs(base_dir)
-    result_path = os.path.join(base_dir, 'result.json')
-    if os.path.exists(result_path):
-        print('hit cache ... skip')
-        return True  # local cache
+        base_dir = home_dir + "/du/{}/{}/{}".format(keyword, price_str, product_id)
+        if not os.path.exists(base_dir):
+            os.makedirs(base_dir)
+        result_path = os.path.join(base_dir, 'result.json')
+        if os.path.exists(result_path):
+            print('hit cache ... skip')
+            return True  # local cache
 
-    automator.app.screenshot(os.path.join(base_dir, 'main.png'))
+        automator.app.screenshot(os.path.join(base_dir, 'main.png'))
 
-    print('开始处理图片。。。image_size: {}'.format(image_size))
-    for i in range(0, image_size - image_size_start - 1):
-        automator.app.swipe(700, 300, 100, 300, 0.1)
-        time.sleep(3)
-        print("swipe...{}".format(i))
+        print('开始处理图片。。。image_size: {}'.format(image_size))
+        for i in range(0, image_size - image_size_start - 1):
+            automator.app.swipe(700, 300, 100, 300, 0.1)
+            time.sleep(3)
+            print("swipe...{}".format(i))
 
-    automator.app.click(300, 300)
-    time.sleep(0.5)
+        automator.app.click(300, 300)
+        time.sleep(0.5)
 
-    image_names = []
+        image_names = []
 
-    image_name = os.path.join(base_dir, '0.png')
-    automator.app.screenshot(image_name)
-    image_names.append(image_name)
-
-    for i in range(1, image_size - 1):
-        automator.app.swipe(100, 300, 700, 300, 0.1)
-        print("swipe...{}".format(i))
-        time.sleep(3)
-        image_name = os.path.join(base_dir, str(i) + '.png')
+        image_name = os.path.join(base_dir, '0.png')
         automator.app.screenshot(image_name)
-        image_names.append(image_name)
+        image_names.append(os.path.basename(image_name))
 
-    time.sleep(1)
-    automator.app.click(500, 500)
+        for i in range(1, image_size - 1):
+            automator.app.swipe(100, 300, 700, 300, 0.1)
+            print("swipe...{}".format(i))
+            time.sleep(3)
+            image_name = os.path.join(base_dir, str(i) + '.png')
+            automator.app.screenshot(image_name)
+            image_names.append(os.path.basename(image_name))
 
-    data = {
-        'product_id': product_id,
-        'price': prices[0],
-        'original_price': prices[1] if len(prices) > 1 else prices[0],
-        'product_name': product_name,
-        'sales': sales,
-        'image_names': image_names,
-    }
-    with open(result_path, 'w') as f:
-        json.dump(data, f, ensure_ascii=False)
-    print('🎉🎉🎉 。。。')
-    print('\n')
-    return True
+        time.sleep(1)
+        automator.app.click(500, 500)
+
+        data = {
+            'product_id': product_id,
+            'price': prices[0],
+            'original_price': prices[1] if len(prices) > 1 else prices[0],
+            'product_name': product_name,
+            'sales': sales,
+        }
+        with open(result_path, 'w') as f:
+            json.dump(data, f, ensure_ascii=False)
+        print('🎉🎉🎉 。。。')
+        print('\n')
+        return True
+    except Exception as e:
+        pass
 
 
 def main():
     keywords = [
-        "耳钉",
         "戒指",
         "耳夹",
         "手链",
